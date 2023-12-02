@@ -10,7 +10,6 @@ export default function TableRow({
   onDelete,
   selectRowHandler,
   selectedRows,
-  toggleMasterCheckBox,
 }) {
   const [editableRow, setEditableRow] = useState(false);
   const [editedData, setEditedData] = useState({});
@@ -111,13 +110,7 @@ export default function TableRow({
         ) : (
           <>
             <EditButton onClick={handleEditClick} />
-            <DeleteActionButton
-              onDelete={() => {
-                toggleMasterCheckBox();
-                onDelete();
-              }}
-              id={value.id}
-            />
+            <DeleteActionButton onDelete={onDelete} id={value.id} />
           </>
         )}
       </Td>

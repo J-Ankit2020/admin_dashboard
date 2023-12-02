@@ -15,7 +15,7 @@ export default function App() {
     setdata((prevData) => {
       return prevData.filter((userData) => !selectedRows.includes(userData.id));
     });
-    toggleMasterCheckBox();
+    if (isMasterCheckBoxSelected) toggleMasterCheckBox();
   }
 
   function toggleMasterCheckBox() {
