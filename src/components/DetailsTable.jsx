@@ -13,6 +13,7 @@ export default function DetailsTable({
   setSelectedRows,
   setIsMasterCheckBoxSelected,
   isMasterCheckBoxSelected,
+  toggleMasterCheckBox,
 }) {
   const [page, setPage] = useState(1);
 
@@ -70,6 +71,7 @@ export default function DetailsTable({
                 onDelete={onDelete}
                 selectRowHandler={setSelectedRows}
                 selectedRows={selectedRows}
+                toggleMasterCheckBox={toggleMasterCheckBox}
               />
             );
           })}
