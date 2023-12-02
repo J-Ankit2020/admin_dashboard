@@ -3,8 +3,13 @@ import { Button } from '@chakra-ui/react';
 
 export default function DeleteButton({ BulkDeleteHandler }) {
   return (
-    <Button color='white' bg='red' onClick={BulkDeleteHandler}>
-      <DeleteIcon />
+    <Button
+      colorScheme='red'
+      onClick={BulkDeleteHandler}
+      className='bulk_delete_btn'
+      leftIcon={<DeleteIcon />}
+    >
+      Delete Selected
     </Button>
   );
 }
